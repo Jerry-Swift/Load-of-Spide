@@ -1,0 +1,40 @@
+{"range": "1", "image": "http://img3m0.ddimg.cn/33/33/25197810-1_l_3.jpg", "title": "尤尔小屋的猫", "recommand": "100%推荐", "author": "莉莉・海沃德", "times": "86852次", "price": "34.70"}
+{"range": "2", "image": "http://img3m7.ddimg.cn/83/17/28522577-1_l_3.jpg", "title": "人间至美：朱光潜经典散文集", "recommand": "100%推荐", "author": "朱光潜", "times": "12541次", "price": "27.20"}
+{"range": "3", "image": "http://img3m5.ddimg.cn/1/26/24157585-1_l_9.jpg", "title": "做个侃爷：精于闲聊 施展魅力（与任何人滔滔不绝的技巧）", "recommand": "99.9%推荐", "author": "帕特里克・金", "times": "56295次", "price": "24.40"}
+{"range": "4", "image": "http://img3m1.ddimg.cn/96/22/24157581-1_l_15.jpg", "title": "魔力四射：如何打动、亲近和影响他人（一本改变人生思维方式的魔力读物，助你掌握社交技巧与领导魅力）", "recommand": "100%推荐", "author": "帕特里克・金", "times": "69642次", "price": "24.40"}
+{"range": "5", "image": "http://img3m8.ddimg.cn/8/26/25345988-1_l_1.jpg", "title": "有话说出来！（彻底颠覆社会人脉的固有方式，社交电池帮你搞定社交。社交恐惧症患者必须拥有的一本实用社交指南，初入大学和职场的必备“攻略”，拿起这本书，你也是“魏璎珞”）纤阅出品", "recommand": "100%推荐", "author": "帕特里克・金", "times": "61614次", "price": "32.00"}
+{"range": "6", "image": "http://img3m5.ddimg.cn/64/16/25110325-1_l_3.jpg", "title": "守护故事的人(一部与《杀死一只知更鸟》相同深度和力量的作品)", "recommand": "100%推荐", "author": "丽萨・温格特", "times": "48891次", "price": "36.00"}
+{"range": "7", "image": "http://img3m3.ddimg.cn/20/26/27939503-1_l_3.jpg", "title": "焦虑日志", "recommand": "100%推荐", "author": "柯瑞妮・斯威特", "times": "60034次", "price": "43.40"}
+{"range": "8", "image": "http://img3m4.ddimg.cn/85/21/27889474-1_l_2.jpg", "title": "养成良好习惯，高效管理时间", "recommand": "100%推荐", "author": "杰米・希尔", "times": "45250次", "price": "26.70"}
+{"range": "9", "image": "http://img3m1.ddimg.cn/86/2/25546541-1_l_9.jpg", "title": "空间简史(教育部推荐小学5、6年级必读书目，与《时间简史》《人类简史》《未来简史》并称“四大简史”)", "recommand": "100%推荐", "author": "托马斯・马卡卡罗", "times": "60849次", "price": "34.70"}
+{"range": "10", "image": "http://img3m6.ddimg.cn/38/25/28541936-1_l_3.jpg", "title": "男孩的学习力", "recommand": "100%推荐", "author": "富永雄辅", "times": "9343次", "price": "34.70"}
+{"range": "11", "image": "http://img3m5.ddimg.cn/96/20/25277865-1_l_3.jpg", "title": "上帝怀中的羔羊：美国普利策文学奖、法国费米娜文学奖获奖作品", "recommand": "100%推荐", "author": "凯洛琳・米勒", "times": "44425次", "price": "34.70"}
+{"range": "12", "image": "http://img3m4.ddimg.cn/95/22/25069964-1_l_19.jpg", "title": "旋木情缘（《今日美国》畅销书获奖作品中国首发：一座重获新生的旋转木马，一段爱情的回归之旅）", "recommand": "100%推荐", "author": "堂娜・法萨诺", "times": "47816次", "price": "29.00"}
+{"range": "13", "image": "http://img3m1.ddimg.cn/66/36/28470981-1_l_3.jpg", "title": "谜案鉴赏", "recommand": "100%推荐", "author": "莉比・菲舍尔・赫尔曼", "times": "59991次", "price": "37.90"}
+{"range": "14", "image": "http://img3m3.ddimg.cn/11/36/28978103-1_l_12.jpg", "title": "公文式教育：全脑阶梯游戏2-4岁（套装共6册）当当定制版", "recommand": "99.8%推荐", "author": "日本公文出版", "times": "3736次", "price": "151.70"}
+{"range": "15", "image": "http://img3m0.ddimg.cn/65/35/28470980-1_l_5.jpg", "title": "阴谋与爱情", "recommand": "100%推荐", "author": "J・B・卞若琳", "times": "60087次", "price": "30.30"}
+{"range": "16", "image": "http://img3m0.ddimg.cn/10/28/25345990-1_l_3.jpg", "title": "间谍之死(拒绝好莱坞翻拍的年度作品，刺激程度超越《碟中谍》，更好看的悬疑推理小说，，更精彩的高科技犯罪！屏住呼吸，追击即将开始) 纤阅出品", "recommand": "100%推荐", "author": "丹・马里兰", "times": "72924次", "price": "43.40"}
+{"range": "17", "image": "http://img3m6.ddimg.cn/1/30/28558036-1_l_12.jpg", "title": "知行合一五千年：度阴山讲中国史(三百万册畅销书《知行合一王阳明》作者新作。）", "recommand": "100%推荐", "author": "度阴山", "times": "4475次", "price": "41.20"}
+{"range": "18", "image": "http://img3m7.ddimg.cn/13/17/28982857-1_l_9.jpg", "title": "从 0 到 1 打造个人品牌", "recommand": "100%推荐", "author": "王一九", "times": "2927次", "price": "57.50"}
+{"range": "19", "image": "http://img3m3.ddimg.cn/44/22/28971503-1_l_3.jpg", "title": "老舍人生修行，贵在心境      （文学大师老舍压轴散文插画珍藏本，给读者生命成长的必修课！）", "recommand": "100%推荐", "author": "老舍", "times": "2993次", "price": "32.70"}
+{"range": "20", "image": "http://img3m7.ddimg.cn/89/6/25480907-1_l_2.jpg", "title": "天啊，妈妈！羊驼是啥？（欧美版《向往的生活》，一个英国绅士的“羊倌\"手记！白领变农民的真实体验，现实版《桃花源记》，与神兽羊驼邂逅在阳光之国西班牙！）", "recommand": "100%推荐", "author": "艾伦・帕克", "times": "10590次", "price": "35.00"}
+{"range": "21", "image": "http://img3m7.ddimg.cn/7/25/25345987-1_l_3.jpg", "title": "安娜（“没有人写的比梅根・莱丽好！”星际宇宙、身世之谜、变异、幻觉、暗恋、成长……校园科幻小说经典之作，在这里追溯本源，探寻真实）纤阅出品", "recommand": "100%推荐", "author": "梅根・莱丽", "times": "18941次", "price": "41.90"}
+{"range": "22", "image": "http://img3m3.ddimg.cn/94/21/25069963-1_l_16.jpg", "title": "呐喊――大屠杀回忆录（二战犹太大屠杀幸存者自述――一部震撼人心的自传）", "recommand": "100%推荐", "author": "曼尼・斯坦伯格", "times": "55156次", "price": "29.00"}
+{"range": "23", "image": "http://img3m9.ddimg.cn/21/27/28470639-1_l_5.jpg", "title": "自游加州全攻略", "recommand": "100%推荐", "author": "李・福斯特", "times": "47328次", "price": "36.60"}
+{"range": "24", "image": "http://img3m1.ddimg.cn/46/27/25254451-1_l_5.jpg", "title": "《另类间谍》（推理小说名家赫尔曼之战争三部曲 展现人性深处的生死博弈）", "recommand": "100%推荐", "author": "莉比・菲舍尔・赫尔曼", "times": "43629次", "price": "22.10"}
+{"range": "25", "image": "http://img3m6.ddimg.cn/2/27/24157586-1_l_7.jpg", "title": "谋杀鉴赏（《读者的选择》最佳小说奖、国际推理小说“安东尼”奖提名。）", "recommand": "100%推荐", "author": "莉比・菲舍尔・赫尔曼", "times": "56105次", "price": "29.00"}
+{"range": "26", "image": "http://img3m2.ddimg.cn/97/23/24157582-1_l_13.jpg", "title": "脱口而出，妙语连珠：令人终生难忘的即兴演说书（成功与否并不取决于经验多寡，而是在于使用什么样的方法）", "recommand": "100%推荐", "author": "安德里・赛德涅夫", "times": "44938次", "price": "34.30"}
+{"range": "27", "image": "http://img3m4.ddimg.cn/0/25/24157584-1_l_12.jpg", "title": "克隆版大脑（如果你脑子里的一切都被计算机复制，会发生什么事？国际斯坦福研究协会人工智能中心首席科学家理查德・瓦尔丁格倾力推荐）", "recommand": "100%推荐", "author": "大卫・沃尔夫", "times": "26071次", "price": "29.70"}
+{"range": "28", "image": "http://img3m3.ddimg.cn/98/24/24157583-1_l_14.jpg", "title": "回归之路（普利策新闻奖得主讲述一个奇迹生还的真实故事。生命力战胜医学极限，意志力超越人类极限，用坚韧和爱续写人生！）", "recommand": "100%推荐", "author": "迈克尔・维特兹", "times": "16131次", "price": "27.40"}
+{"range": "29", "image": "http://img3m0.ddimg.cn/54/14/28530270-1_l_3.jpg", "title": "斯坦福高效睡眠法（樊登读书创始人樊登2020激赏推荐教你如何提高睡眠质量掌控人生）", "recommand": "100%推荐", "author": "「日」西野精治", "times": "2452次", "price": "35.80"}
+{"range": "30", "image": "http://img3m8.ddimg.cn/43/1/28972888-1_l_8.jpg", "title": "等一朵花开（国民漫画家小林代表作）", "recommand": "100%推荐", "author": "林帝浣", "times": "2153次", "price": "65.20"}
+{"range": "31", "image": "http://img3m2.ddimg.cn/88/15/28971052-1_l_6.jpg", "title": "众神的晚霞", "recommand": "100%推荐", "author": "渡边淳一", "times": "2078次", "price": "36.60"}
+{"range": "32", "image": "http://img3m3.ddimg.cn/45/2/28972593-1_l_6.jpg", "title": "白色记事簿（魔宙旗下“天才捕手计划”重磅新作，三款异型、主题书签随机赠送一枚）", "recommand": "99.8%推荐", "author": "陈拙", "times": "2057次", "price": "46.00"}
+{"range": "33", "image": "http://img3m1.ddimg.cn/53/35/28558781-1_l_3.jpg", "title": "女孩的学习力", "recommand": "99.9%推荐", "author": "富永雄辅", "times": "2035次", "price": "34.70"}
+{"range": "34", "image": "http://img3m9.ddimg.cn/26/22/28522619-1_l_3.jpg", "title": "格局", "recommand": "99.9%推荐", "author": "月夜生凉", "times": "3977次", "price": "29.90"}
+{"range": "35", "image": "http://img3m8.ddimg.cn/55/24/25082398-1_l_8.jpg", "title": "囚鸟（与《1984》、《第二十二条军规》齐名的伟大小说）", "recommand": "99.9%推荐", "author": "库尔特・冯内古特", "times": "2933次", "price": "28.50"}
+{"range": "36", "image": "http://img3m7.ddimg.cn/55/16/27918847-1_l_9.jpg", "title": "朝与同歌暮与酒", "recommand": "100%推荐", "author": "关东野客", "times": "24747次", "price": "41.80"}
+{"range": "37", "image": "http://img3m7.ddimg.cn/84/19/28537527-1_l_2.jpg", "title": "一人份的热闹", "recommand": "100%推荐", "author": "尹维安", "times": "1765次", "price": "34.70"}
+{"range": "38", "image": "http://img3m2.ddimg.cn/24/16/25301652-1_l_3.jpg", "title": "最佳命中率", "recommand": "100%推荐", "author": "六识", "times": "20192次", "price": "43.40"}
+{"range": "39", "image": "http://img3m4.ddimg.cn/77/13/27911444-1_l_3.jpg", "title": "高尔基成长三部曲（童年、在人间、我的大学）", "recommand": "100%推荐", "author": "高尔基", "times": "36472次", "price": "37.80"}
+{"range": "40", "image": "http://img3m6.ddimg.cn/29/15/28512326-1_l_3.jpg", "title": "那些听过却从未搞明白的问题", "recommand": "100%推荐", "author": "大卫・加耶", "times": "8670次", "price": "35.20"}
