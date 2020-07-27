@@ -1,5 +1,16 @@
 #coding=utf-8
+'''
 
+*-----------------------------------------------------------------*
+*                                                                 *
+*                      尝试编写第三个爬虫代码                        *
+*                     爬取目标为B站坤坤的篮球视频                     *
+*                           爬取内容为:                             *
+*                标题、UP主、播放次数、弹幕数、上传时间                *
+*                                                                 *
+*-----------------------------------------------------------------*
+
+'''
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.by import By
