@@ -105,7 +105,6 @@ def save_to_excel(soup):    #过滤当前页面内的目标内容，写入excel�
         n = n + 1
 
 
-
 def get_source():   #提取网页源码，调用save_to_excel函数，过滤出目标内容
     WAIT.until(EC.presence_of_element_located
                ((By.CSS_SELECTOR, '#all-list > div.flow-loader > div.filter-wrap')))    #等待所有页面加载完成
