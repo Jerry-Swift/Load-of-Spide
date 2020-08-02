@@ -17,11 +17,11 @@ from bs4 import BeautifulSoup
 from fake_useragent import UserAgent    #模仿浏览器请求
 import xlwt     #写excel表格模块，excel表格读模块为xlrd
 
-
+from multiprocessing import Pool, cpu_count
 
 def main(page):
 
-    url = 'https://movie.douban.com/top250?start='+ str(page*25)+'&filter='
+    #url = 'https://movie.douban.com/top250?start='+ str(page*25)+'&filter='
     html = request_douban(url)
     soup = BeautifulSoup(html, 'lxml')
     save_to_excel(soup)
@@ -86,8 +86,15 @@ def save_to_excel(soup):
 
 
 if __name__ == '__main__':
+    urls = []
+    pool = Pool(cpu_count())
 
     for i in range(0, 10):
-        main(i)
+        url = 'https://movie.douban.com/top250?start=' + str(i * 25) + '&filter='
+        urls.append(url)
+
+    pool.map(main, urls)
+    pool.close()
+    pool.join()
 
 book.save(u'豆瓣最受欢迎的250部电影.xlsx')    #保存表格文件并命名

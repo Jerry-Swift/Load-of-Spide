@@ -57,7 +57,7 @@ def request_page(url):
 
 def get_page_urls():        #遍历所有页面，将页面中的链接依次加入到urls内
 
-    for i in range(1, 5):   #指定要爬取的页面
+    for i in range(1, 2):   #指定要爬取的页面
         baseurl = 'https://www.mzitu.com/page/{}'.format(i)
         print('******* ' + baseurl + ' ********')
         html = request_page(baseurl)
