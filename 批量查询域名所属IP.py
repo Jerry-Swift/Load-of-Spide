@@ -39,16 +39,21 @@ class batch_query_domain():
     #     self.wait = WebDriverWait(self.browser, 5)
 
     # def read_xlsx(self):    #读取各子表域名数据
-    def read_xlsx(self, sheet, nrows): #读取当前子表内域名数据
-        # self.table = xlrd.open_workbook(self.file)
-        # self.sheets = []
-        # for i in range(0, 10):
-        #     self.sheets.append(self.table.sheets()[i])    #读取表格文件内所有子表
-        # for i in range(0, 10):  #读取子表内的有效行数
+    # def read_xlsx(self, sheet, nrows): #读取当前子表内域名数据
+    #      self.table = xlrd.open_workbook(self.file)
+    #      # self.sheets = []
+    #      for i in range(0, 10):
+    #          sheets.append(self.table.sheets()[i])    #读取表格文件内所有子表
+    #      for i in range(0, 10):  #读取子表内的有效行数
+    #
+    #     self.domains = sheet.col_values(1, 1, nrows) #将域名添加进domains列表
+    #     #print(self.domains)
+    #     return self.domains
 
-        self.domains = sheet.col_values(1, 1, nrows) #将域名添加进domains列表
-        #print(self.domains)
-        return self.domains
+    def read_xlsx(self, sheet, nrow):
+        domains = sheet.col_values(1, 1, nrow)
+        return domains
+
 
 
     def request_domain(self, query_url):   #请求指定url
@@ -62,12 +67,12 @@ class batch_query_domain():
             headers = {
                 "User-Agent": agent
             }
-            url = self.url+ query_url     #构造get请求直接查询
-            print("开始访问： " + url)
+            self.final_url = self.url+ query_url     #构造get请求直接查询
+            #print("开始访问： " + self.url)
             try:
-                res = requests.get(url, headers=headers)
+                res = requests.get(self.final_url, headers=headers)
                 if res.status_code == 200:
-                    print(url + ' 访问正常')
+                    print('访问正常: ' + self.final_url)
                     #print(res.text)
                     return res.text
 
@@ -78,9 +83,13 @@ class batch_query_domain():
 
     def get_ip(self, soup):
         ips = []
-        ip_list = soup.find(class_="WhoIpWrap jspu").find_all(class_="WhwtdWrap bor-b1s col-gray03")
-        for item in ip_list:
-            ips.append(item.find_all(class_="Whwtdhalf w15-0")[1].text)
+        try:
+            ip_list = soup.find(class_="WhoIpWrap jspu").find_all(class_="WhwtdWrap bor-b1s col-gray03")
+            for item in ip_list:
+                ips.append(item.find_all(class_="Whwtdhalf w15-0")[1].text)
+        except BaseException:
+            print(self.url)
+
         return ips
 
 
@@ -88,36 +97,62 @@ def main():
     url = 'http://ip.tool.chinaz.com/'
     file = 'tt.xlsx'
     # sheets = []
-    batch_query = batch_query_domain(url)
-    table = xlrd.open_workbook(file)
-    sheets = table.sheets()
-    nrows = []
+    batch_query = batch_query_domain(url)   #创建类实例
+    table = xlrd.open_workbook(file)        #读取表格
+    sheets = table.sheets()                 #获取所有的字表对象
+    name_sheets = table.sheet_names()       #获取字表名称用于新建TXT文档
+    print('***********表格名************')
+    print(name_sheets)
+    print('****************************')
+
+
+    nrows = []                              #用于存储各字表的有效行数
+    item = 0
     for sheet in sheets:
-        nrows.append(sheet.nrows)
-    write_table = copy(table)
-    write_sheets = []
 
-    for i in range(0, 10):
-        write_sheets.append(write_table.get_sheet(i))
-
-
-    print(write_sheets)
-
-    for sheet in write_sheets:
-        print(sheet)
-        n = 0
-        domains = batch_query.read_xlsx(sheet, nrows)
+        nrows.append(sheet.nrows)           #获取字表行数并写入nrows
+        nrow = sheet.nrows
+        domains = batch_query.read_xlsx(sheet, nrow)
         print(domains)
+
         for domain in domains:
             html = batch_query.request_domain(domain)
-            soup = BeautifulSoup(html, 'lxml')
+            try:
+                soup = BeautifulSoup(html, 'lxml')
+            except BaseException:
+                print('错误: ' + domain)
+                print('!!!!!!!!!!!!!')
             ips = batch_query.get_ip(soup)
-            _ = 0
-            for ip in ips:
-                sheet.write(n, 5 + _, ip)
-                _ = _ + 1
-            n = n + 1
-    table.save(u'td.xlsx')
+            with open(name_sheets[item] + '.txt', 'a') as f:
+                print('写入： ' + name_sheets[item] + '.txt')
+                f.write(str(ips))
+
+        item += 1
+
+        print(item)
+
+    # write_table = copy(table)
+    # write_sheets = []
+
+
+
+    # print(write_sheets)
+    #
+    # for sheet in write_sheets:
+    #     print(sheet)
+    #     n = 0
+    #     domains = batch_query.read_xlsx(sheet, nrows)
+    #     print(domains)
+    #     for domain in domains:
+    #         html = batch_query.request_domain(domain)
+    #         soup = BeautifulSoup(html, 'lxml')
+    #         ips = batch_query.get_ip(soup)
+    #         _ = 0
+    #         for ip in ips:
+    #             sheet.write(n, 5 + _, ip)
+    #             _ = _ + 1
+    #         n = n + 1
+    # table.save(u'td.xlsx')
 
 
 if __name__ == '__main__':
