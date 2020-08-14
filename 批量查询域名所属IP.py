@@ -14,15 +14,8 @@
 
 '''
 import requests
-from selenium import webdriver
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as ec
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
-from multiprocessing import Pool, cpu_count
-import xlwt
 import xlrd
 from xlutils.copy import copy
 
@@ -50,19 +43,19 @@ class batch_query_domain():
     #     #print(self.domains)
     #     return self.domains
 
-    def read_xlsx(self, sheet, nrow):
+    def read_xlsx(self, sheet, nrow):       #从表格读取域名数据，在下一版本准备更新为数据库查询
         domains = sheet.col_values(1, 1, nrow)
         return domains
 
 
 
-    def request_domain(self, query_url):   #请求指定url
+    def request_domain(self, query_url):   #请求目标url，IP查询网站基本可以通用
 
             # self.browser.get('http://ip.tool.chinaz.com/')
             # for i in self.domains:
             #     input = self.wait.until(ec.presence_of_element_located(By.CSS_SELECTOR, '#address'))
             #     input.send_keys('')
-            user_agent = UserAgent()
+            user_agent = UserAgent()      #构造随机的User-Agent请求头，避免被反爬检测到导致拒绝访问
             agent = user_agent.random
             headers = {
                 "User-Agent": agent
@@ -79,9 +72,9 @@ class batch_query_domain():
             except res.RequestException:
                 print('请求错误!')
                 return None
+        
 
-
-    def get_ip(self, soup):
+    def get_ip(self, soup):     #从返回的页面中过滤出IP内容，需要根据不同网站重写子类函数，此函数仅适用于chinaz.com
         ips = []
         try:
             ip_list = soup.find(class_="WhoIpWrap jspu").find_all(class_="WhwtdWrap bor-b1s col-gray03")
@@ -91,8 +84,22 @@ class batch_query_domain():
             print(self.url)
 
         return ips
-
-
+    
+    
+class batch_query_ip138(batch_query_domain):    #针对ip138.com重写子类
+    def __init__(self, url):
+        super.__init__(url)     #super()继承父类init
+        
+        
+    def get_ip(self, soup):     #根据IP138.com返回的页面重写过滤函数
+        ips = []
+        try:
+            ip_list = soup.find()
+    
+    
+    
+    
+    
 def main():
     url = 'http://ip.tool.chinaz.com/'
     file = 'tt.xlsx'
