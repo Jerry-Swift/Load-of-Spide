@@ -8,11 +8,14 @@
 *                    目前只是按照页面格式定位到域名
 *                    程序逻辑为简单的URL拼接并请求
 *                得到响应页面后再过滤出域名，不再详细说明
+*             NOTICE：需要开启全局模式代理，否则会报连接超时
 *                                              --2020.08.18
+*
+*           取消代理池引入，轮询多个谷歌服务器，已能够避免IP被封锁
+*                                              --2020.08.30
+*
 *                          下一版本计划：
 *                      引入进程池，提高搜索速度
-*                   创建代理池，避免因多次搜索被封IP
-*       加入多个谷歌相关网站进行搜索，降低对单个谷歌服务器的请求次数
 *        加入命令行调用格式，直接指定搜索关键词及保存结果的文件名
 *                    加入特殊情况处理，增加容错性
 *                            最终版本：
@@ -62,7 +65,7 @@ def query_domain(url):      #创建随机请求头
 
 def get_domain(soup):       #定位域名
     try:
-        domain = soup.find(class_="iUh30 tjvcx").text
+        domain = soup.find(class_="iUh30 gBIQub tjvcx").text
         return domain
     except AttributeError:
         print('URL has no attribute text')
@@ -71,21 +74,30 @@ def get_domain(soup):       #定位域名
         pass
 
 def main():
-    lists = get_keyWord('us_target.txt')
+    lists = get_keyWord('medicine_company.txt')
+    googles = []
+    googles.append('https://www.google.com/search?hl=en&q=%s')
+    googles.append('https://www.google.ca/search?hl=en&q=%s')
+    googles.append('https://www.google.com.hk/search?hl=en&q=%s')
+    googles.append('https://www.google.com.my/search?hl=en&q=%s')
+    googles.append('https://www.google.co.za/search?hl=en&q=%s')
+    i = 0
     for item in lists:
-        # url = 'https://www.google.com.hk/search?hl=en&q=%s' % item.repla
-        url = 'http://www.google.ca/search?hl=en&q=%s' % item.replace(' ', '%20')   #空格需要转义为%20
+
+        url = googles[i % 5] % item.replace(' ', '%20')
+        i += 1
+        # url = 'http://www.google.ca/search?hl=en&q=%s' % item.replace(' ', '%20')   #空格需要转义为%20
         print(url)
         html = query_domain(url)
         soup = BeautifulSoup(html, 'lxml')
         domain = get_domain(soup)
         if domain:
-            with open('us_domain.txt', 'a') as file:
+            with open('medicine_domain.txt', 'a') as file:
                 file.write(domain + '\n')
         else:
-            with open('us_domain.txt', 'a') as file1:
+            with open('medicine_domain.txt', 'a') as file1:
                 file1.write('NULL\n')
-        time.sleep(5)
+        time.sleep(2)
 
 if __name__ == '__main__':
     main()
